@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seatwork 2</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<style>
+		body {
+			background-color: navy;
+			text-align: center;
+			color: darkcyan;
+		}
+	</style>
+</head>
+<body>
+	<h1>Calculo</h1>
+	<p>Hello, my name is Calculo. I help you solve for math problems</p>
+	<img src="Calculo.png" width="256px">
+	<form>
+		<div class="row">
+			<div class="col">
+				Enter a value for x:
+				<input type="number" class="form-control" id="x">
+			</div>
+			<div class="col">
+				Enter a value foy y:
+				<input type="number" class="form-control" id="y">
+			</div>
+		</div>
+		<br>
+		<button type="button" id="calc" class="btn btn-primary" onclick="add()">Sum of x and y</button>
+		<button type="button" id="calc" class="btn btn-success"onclick="subtract()">Difference of x and y</button>
+		<button type="button" id="calc" class="btn btn-warning" onclick="multiply()">Product of x and y</button>
+		<button type="button" id="calc" class="btn btn-danger" onclick="quotient()">Quotient of x and y</button>
+		<p id="sum"></p>
+		<p id="difference"></p>
+		<p id="product"></p>
+		<p id="quotient"></p>
+	</form>
+	<script type="text/javascript">
+		function add(){ //addition
+			var x= parseInt(document.getElementById("x").value);
+			var y= parseInt(document.getElementById("y").value);
+			var sum= x + y
+			document.getElementById("sum").innerHTML="sum:" + sum;
+		}
+		function subtract(){ //subtraction
+			var x= parseInt(document.getElementById("x").value);
+			var y= parseInt(document.getElementById("y").value);
+			var difference= x - y
+			document.getElementById("difference").innerHTML="difference:" + difference;
+		}
+		function multiply(){ //multiplication
+			var x= parseInt(document.getElementById("x").value);
+			var y= parseInt(document.getElementById("y").value);
+			var product= x * y
+			document.getElementById("product").innerHTML="product: " + product;
+		}
+		function divide(){ //divison (didn't work)
+			var x= parseInt(document.getElementById("x").value);
+			var y= parseInt(document.getElementById("y").value);
+			var quotient= x / y
+			document.getElementById("quotient").innerHTML="quotient: " + quotient;
+		}
+		window.alert("Welcome")
+	</script>
+</body>
+</html>
